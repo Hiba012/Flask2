@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Prédiction de Pluie</title>
+</head>
+<body>
+    <h1>Prédire la pluie 🌦️</h1>
+    <form method="POST">
+        <label>Température (°C) : <input type="number" step="any" name="temperature" required></label><br>
+        <label>Humidité (%) : <input type="number" step="any" name="humidity" required></label><br>
+        <label>Vitesse du vent : <input type="number" step="any" name="wind_speed" required></label><br>
+        <label>Couverture nuageuse (%) : <input type="number" step="any" name="cloud_cover" required></label><br>
+        <label>Pression (hPa) : <input type="number" step="any" name="pressure" required></label><br>
+        <button type="submit">Prédire</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Résultat : {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
